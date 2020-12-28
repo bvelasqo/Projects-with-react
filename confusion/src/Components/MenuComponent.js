@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./MenuComponent.css";
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle} from 'reactstrap';
+import  PlatoSeleccionado from "./PlatoSeleccionadoComponent"
+import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 
 class Menu extends Component {
     constructor(props) {
@@ -17,13 +18,7 @@ class Menu extends Component {
     renderDish(plato){
         if(plato != null){
             return(
-                <Card>
-                    <CardImg width="100%" src = {plato.image} alt= {plato.name}/>
-                    <CardBody>
-                        <CardTitle className="titulo1">{plato.name}</CardTitle>
-                        <CardText>{plato.description}</CardText>
-                    </CardBody>
-                </Card>
+                <PlatoSeleccionado PlatoSeleccionado = {plato}/>
             );
         }else{
             return(<div></div>);
@@ -47,7 +42,7 @@ class Menu extends Component {
                     {menu}
                 </div >
                 <hr></hr>
-                <div className="row">
+                <div>
                     {this.renderDish(this.state.selectedDish)}
                 </div>
             </div>
