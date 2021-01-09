@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap'
+import Home from './HomeComponent';
 import Menu from './MenuComponent'
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 import  PlatoSeleccionado from "./PlatoSeleccionadoComponent"
 import { PLATOS } from "../shared/platos";
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 class Main extends Component{
     constructor(props) {
       super(props);
         this.state = {
-          platos: PLATOS,
-          selectedDish: null
+          platos: PLATOS
         };
     }
 
     
-    onDishSelected(platoId){
-        this.setState({selectedDish: platoId});
-    }
-
 
     render(){
+      const HomePage = () => {
+        return(
+            <Home />
+        );
+      }
       return (
         <div className="App">
-          <Navbar dark color="primary">
-            <div className="container">
-              <NavbarBrand href="/">
-                Confusion Comidas rápidas
-              </NavbarBrand>
-            </div>
-          </Navbar>
-          <Menu platos={this.state.platos} onClick={(platoId) => this.onDishSelected(platoId)}/>
-          <PlatoSeleccionado PlatoSeleccionado = {this.state.platos.find((plato) => plato.id === this.state.selectedDish)}/>
+          <Header/>
+          <Switch>
+              <Route path='/home' component={HomePage} />
+              <Route exact path='/menu' component={() => <Menu platos={this.state.platos} />} />
+              <Redirect to="/home" />
+          </Switch>
+          <Footer/>
         </div>
       );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./MenuComponent.css";
+import "./css/MenuComponent.css";
 import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 
 function RenderPlato({plato, onClick}){
@@ -16,7 +16,7 @@ function RenderPlato({plato, onClick}){
 const Menu = (props) => {
     const menu= props.platos.map((plato) => {
         return(<div key={plato.id} className="col-12 col-md-5 m-1">
-            <RenderPlato plato={plato} onClick={props.onClick(plato.id)}/> 
+            <RenderPlato plato={plato} onClick={props.onClick}/> 
         </div>);
     });
     return (
