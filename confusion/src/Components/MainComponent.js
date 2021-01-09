@@ -3,6 +3,7 @@ import Home from './HomeComponent';
 import Menu from './MenuComponent'
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 import Footer from './FooterComponent';
 import  PlatoSeleccionado from "./PlatoSeleccionadoComponent"
 import { PLATOS } from "../shared/platos";
@@ -40,6 +41,13 @@ class Main extends Component{
             />
         );
       }
+
+      const AboutPage = () => {
+        return(
+          <About leaders = {this.state.lideres}/>
+        );
+      }
+
       return (
         <div className="App">
           <Header/>
@@ -48,6 +56,7 @@ class Main extends Component{
               <Route exact path='/contactus' component={Contact} />
               <Route exact path='/menu' component={() => <Menu platos={this.state.platos} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
+              <Route exact path='/about' component={AboutPage}/>
               <Redirect to="/home" />
           </Switch>
           <Footer/>
