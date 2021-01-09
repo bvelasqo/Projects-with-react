@@ -1,186 +1,43 @@
-export const PLATOS =
+export const PLATOS=
     [
         {
+        id: 0,
+        nombre: 'HAMBURGUESA',
+        imagen: '/assets/images/anborguesa.png',
+        categoría: 'red',
+        etiqueta: 'Caliente',
+        precio: '4.99',
+        destacado: true,
+        descripción: "Una combinación única de Uthappam indio (panqueque) y pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros, cebolla Vidalia, chiles Guntur y Buffalo Paneer."                    
+        },
+        {
         id: 1,
-        name: 'Hamburguesa',
-        image: 'assets/images/anborguesa.png',
-        category: 'carnes',
-        label: '',
-        price: '10000',
-        description: 'Rica hamburguesa con todo lo que te gusta, hecha para que la disfrutes.',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2012-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2014-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2015-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2013-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "25 Cent",
-            date: "2011-12-02T17:57:28.556094Z"
-            }
-        ]                        },
+        nombre: 'CHUZO',
+        imagen: '/assets/images/Chucito.png',
+        categoría: 'aperitivo',
+        etiqueta:'',
+        precio: '1.99',
+        destacado: false,
+        descripción: "Calabacín frito rebozado con una masa de harina de garbanzos ligeramente especiada acompañada de una salsa de tamarindo dulce y picante"
+        },
         {
         id: 2,
-        name: 'Hot dog',
-        image: 'assets/images/Dogy.png',
-        category: 'Tiernos',
-        label: '',
-        price: '8000',
-        description: 'Exquisito hot dog para disfrutar con tu pareja, hablo de tu lengua.',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2012-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2014-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2015-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2013-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "25 Cent",
-            date: "2011-12-02T17:57:28.556094Z"
-            }
-        ]
-        },
-        {
-        id: 4,
-        name: 'Picada',
-        image: 'assets/images/Picada.png',
-        category: 'carnes',
+        nombre: 'PICADA',
+        imagen: '/assets/images/Picada.png',
+        categoría: 'aperitivo',
         label: 'Nuevo',
-        price: '15000',
-        description: 'Una combinacion de los mejores sabores para disfrutar con tu familia.',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2012-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2014-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2015-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2013-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "25 Cent",
-            date: "2011-12-02T17:57:28.556094Z"
-            }
-        ]
+        precio: '1.99',
+        destacado: false,
+        descripción: 'Una experiencia ConFusion por excelencia, ¿es un vada o es una dona?'
         },
         {
-        id: 5,
-        name: 'Salchipapas',
-        image: 'assets/images/Salchipapas.png',
-        category: 'Tiernos',
-        label: '',
-        price: '9000',
-        description: 'Las mejores papas gourmet fusionadas con las mejores salchichas',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2012-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2014-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2015-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2013-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "25 Cent",
-            date: "2011-12-02T17:57:28.556094Z"
-            }
-        ]
+        id: 3,
+        nombre: 'HOT DOG',
+        imagen: '/assets/images/Dogy.png',
+        categoría: 'postre',
+        etiqueta:'',
+        precio: '2.99',
+        destacado: false,
+        descripción: 'Un delicioso pastel de queso semidulce estilo Nueva York, con corteza de galleta Graham y condimentado con cardamomos indios'
         }
     ];
