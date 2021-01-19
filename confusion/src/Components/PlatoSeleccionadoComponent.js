@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentFormComponent'
+
 function RenderPlato({plato}){
     return(
         <Card>
@@ -27,10 +29,10 @@ function RenderPlato({plato}){
         );
     });
     return(
-        <div className="col-12 col-md-5 m-1">
+        <>
             <h4>COMENTARIOS</h4>
             {comentarios}
-        </div>
+        </>
     );
 }
 
@@ -46,10 +48,10 @@ function RenderPlato({plato}){
                     <Breadcrumb>
 
                         <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>{props.PlatoSeleccionado.nombre}</BreadcrumbItem>
+                        <BreadcrumbItem active>{plato.nombre}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className="col-12">
-                        <h3>{props.PlatoSeleccionado.nombre}</h3>
+                        <h3>{plato.nombre}</h3>
                         <hr />
                     </div>                
                 </div>
@@ -57,7 +59,12 @@ function RenderPlato({plato}){
                     <div className="col-12 col-md-5 m-1">
                         <RenderPlato plato={plato}/>
                     </div>
-                    <RenderComentario comments = {props.comments}/>
+                    <div className="col-12 col-md-5 m-1">
+                        <RenderComentario comments = {props.comments}/>
+                        <CommentForm theId = {plato.id}/>
+                    </div>
+
+                    
                 </div>   
                 </div>
                 
